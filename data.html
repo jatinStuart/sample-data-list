@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <meta name="color-scheme" content="light dark"><script>(function() {
+			// injected DOM script is not a content script anymore,
+			// it can modify objects and functions of the page
+			var _pushState = history.pushState;
+			history.pushState = function(state, title, url) {
+				_pushState.call(this, state, title, url);
+				window.dispatchEvent(
+					new CustomEvent('state-changed', { detail: url })
+				);
+			};
+			// repeat the above for replaceState too
+		})();
+    </script>
+
+    <script>
+    (function() {
+			// injected DOM script is not a content script anymore,
+			// it can modify objects and functions of the page
+			var _pushState = history.pushState;
+			history.pushState = function(state, title, url) {
+				_pushState.call(this, state, title, url);
+				window.dispatchEvent(
+					new CustomEvent('state-changed', { detail: url })
+				);
+			};
+			// repeat the above for replaceState too
+		})();
+    </script>
+    
+    <script>(function() {
+			// injected DOM script is not a content script anymore,
+			// it can modify objects and functions of the page
+			var _pushState = history.pushState;
+			history.pushState = function(state, title, url) {
+				_pushState.call(this, state, title, url);
+				window.dispatchEvent(
+					new CustomEvent('state-changed', { detail: url })
+				);
+			};
+			// repeat the above for replaceState too
+		})();
+    </script>
+    <style>
+        
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="true"><link rel="preconnect" href="https://fonts.gstatic.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&amp;display=swa">
+    </head>
+    <body>
+        <pre style="word-wrap: break-word; white-space: pre-wrap;">
+[
+  {
+    "id": 1,
+    "title": "padh le bhai server se bol rha hoon ",
+  },
+  {
+    "id": 2,
+    "title": "padh le bhai server se bol rha hoon 2 ",
+  },
+  {
+    "id": 3,
+    "title": "padh le bhai server se bol rha hoon 2 ",
+  },
+  {
+    "id": 4,
+    "title": "padh le bhai server se bol rha hoon 2 ",
+  },
+  {
+    "id": 5,
+    "title": "padh le bhai server se bol rha hoon 2 ",
+  },
+  {
+    "id": 6,
+    "title": "padh le bhai server se bol rha hoon 2 ",
+  },  
+]</pre>
+</body>
+</html>
